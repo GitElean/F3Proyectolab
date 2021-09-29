@@ -9,7 +9,7 @@ Created on Wed Sep 29 12:45:23 2021
 """
 
 import tkinter as tk
-from tkinter import font
+from tkinter import PhotoImage, font
 import matplotlib
 
 window = tk.Tk()
@@ -19,10 +19,15 @@ window.geometry("800x600")
 
 #Area de las placas de deflexion
 area = 0.006 #metros
+
 #Distancia de separacion entre las placas
 dist = 0.005 #metros
+
 #Distancia desde las placas de deflexión verticales a las horizontales
 verHor = 0.003 #metros
+
+photo1= PhotoImage(file="TuboCatodico.png")
+tk.Label(window, image=photo1, bg="gray"). grid(row=0, column=0)
 
 """input"""
 #Voltaje de aceleración de los electrones
@@ -59,5 +64,11 @@ f = tk.Entry(window) .grid(row=7, column=2)
 
 window.mainloop()
 #Ecuaciones 
-#1
+#La intensidad del campo ( E ), la distancia sobre la que actuó ( d ) y el ángulo ( θ ) son medibles, 
+# y Thomson ya había calculado la velocidad del rayo ( v ). Por lo tanto, midiendo la deflexión, 
+# Thomson pudo calcular la carga específica ( q / m ).
+
+#---------------------------1
+#t= d/v
 #2
+
