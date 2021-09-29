@@ -15,12 +15,47 @@ import matplotlib
 window = tk.Tk()
 window.title("Simulador de tubos catódicos")
 window.config(background="black")
+window.geometry("800x600")
+
+#Area de las placas de deflexion
+area = 0.006 #metros
+#Distancia de separacion entre las placas
+dist = 0.005 #metros
+#Distancia desde las placas de deflexión verticales a las horizontales
+verHor = 0.003 #metros
 
 """input"""
+#Voltaje de aceleración de los electrones
 tk.Label(window, text="Amplitud", bg="black", fg="white", font="none 12 bold") .grid(row=1, column=0)
-tk.Label(window, text="Frecuencia", bg="black", fg="white", font="none 12 bold") .grid(row=1, column=0)
-tk.Label(window, text="Amplitud", bg="black", fg="white", font="none 12 bold") .grid(row=1, column=0)
-tk.Label(window, text="Amplitud", bg="black", fg="white", font="none 12 bold") .grid(row=1, column=0)
+a = tk.Entry(window) .grid(row=1, column=2)
+
+
+#Voltaje de de placas de deflexión verticales
+tk.Label(window, text="Deflexion vertical", bg="black", fg="white", font="none 12 bold") .grid(row=2, column=0)
+b = tk.Entry(window) .grid(row=2, column=2)
+
+#Voltaje de de placas de deflexión horizontales
+tk.Label(window, text="Deflexion horizontal", bg="black", fg="white", font="none 12 bold") .grid(row=3, column=0)
+c = tk.Entry(window) .grid(row=3, column=2)
+
+#Boton de modo cambia las señales (positivas a negativas)
+
+#Control de señal sinosuidal
+tk.Label(window, text="Señal Sinuosoidal", bg="black", fg="white", font="none 12 bold") .grid(row=4, column=0)
+"""a = tk.Entry(window) .grid(row=1, column=2)
+a = tk.Entry(window) .grid(row=1, column=2)"""
+
+#Frecuencia de la señal
+tk.Label(window, text="Frecuencia", bg="black", fg="white", font="none 12 bold") .grid(row=5, column=0)
+d = tk.Entry(window) .grid(row=5, column=2)
+
+#Fase de la señal
+tk.Label(window, text="Fase", bg="black", fg="white", font="none 12 bold") .grid(row=6, column=0)
+e = tk.Entry(window) .grid(row=6, column=2)
+
+#Tiempo de latencia
+tk.Label(window, text="Tiempo de latencia", bg="black", fg="white", font="none 12 bold") .grid(row=7, column=0)
+f = tk.Entry(window) .grid(row=7, column=2)
 
 window.mainloop()
 #Ecuaciones 
