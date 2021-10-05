@@ -31,7 +31,7 @@ tk.Label(window, image=photo1, bg="gray"). grid(row=0, column=4)
 
 """input"""
 #Voltaje de aceleración de los electrones
-tk.Label(window, text="Amplitud", bg="black", fg="white", font="none 12 bold") .grid(row=1, column=0)#✓
+tk.Label(window, text="Amplitud", bg="black", fg="white", font="none 12 bold") .grid(row=1, column=0)
 a = tk.Entry(window) .grid(row=1, column=2)
 
 
@@ -50,7 +50,7 @@ tk.Label(window, text="Señal Sinuosoidal", bg="black", fg="white", font="none 1
 """a = tk.Entry(window) .grid(row=1, column=2)
 a = tk.Entry(window) .grid(row=1, column=2)"""
 
-#Frecuencia de la señal
+#Frecuencia de la señal W
 tk.Label(window, text="Frecuencia", bg="black", fg="white", font="none 12 bold") .grid(row=5, column=0)
 w = tk.Entry(window) .grid(row=5, column=2)
 
