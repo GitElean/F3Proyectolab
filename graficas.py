@@ -13,17 +13,22 @@ import matplotlib as mlp
 import numpy as np
 
 
-def xaxisplot(wx,d, va, phi,ax):
+def xaxisplot(i, wx,d, va, phi,ax):
     t = d/va
-    return x = ax * np.cos(wx * t + phi)
+    x = (ax * np.cos(wx * t + phi))*i
+    return x
 
 
-def yaxisplot(wy, d, va, phi, ay):
+def yaxisplot(i, wy, d, va, phi, ay):
     t = d / va
-    return y = ay * np.cos(wy * t + phi)
+    y = (ay * np.cos(wy * t + phi)) * i
+    return y
 
 
-def makeplotx(wx,d, va, phi,ax)
+def makeplotx(wx,d, va, phi,ax):
     xlist = np.linespace(-10,10,num=300)
+    ylist = yaxisplot(xlist, wx,d, va, phi,ax)
+
+    
 
 

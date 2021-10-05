@@ -10,6 +10,7 @@ Created on Wed Sep 29 12:45:23 2021
 import tkinter as tk
 from tkinter import PhotoImage, font
 import matplotlib as plt
+from numpy import double
 import graficas as plots
 
 window = tk.Tk()
@@ -32,16 +33,16 @@ tk.Label(window, image=photo1, bg="gray"). grid(row=0, column=4)
 """input"""
 #Voltaje de aceleración de los electrones
 tk.Label(window, text="Amplitud", bg="black", fg="white", font="none 12 bold") .grid(row=1, column=0)
-a = tk.Entry(window) .grid(row=1, column=2)
+a = double(tk.Entry(window) .grid(row=1, column=2))
 
 
 #Voltaje de de placas de deflexión verticales
 tk.Label(window, text="Deflexion vertical", bg="black", fg="white", font="none 12 bold") .grid(row=2, column=0)
-b = tk.Entry(window) .grid(row=2, column=2)#para y
+b = double(tk.Entry(window) .grid(row=2, column=2))#para y
 
 #Voltaje de placas de deflexión horizontales
 tk.Label(window, text="Deflexion horizontal", bg="black", fg="white", font="none 12 bold") .grid(row=3, column=0)
-c = tk.Entry(window) .grid(row=3, column=2) #para x
+c = double(tk.Entry(window) .grid(row=3, column=2)) #para x
 
 #Boton de modo cambia las señales (positivas a negativas)
 
@@ -52,15 +53,15 @@ a = tk.Entry(window) .grid(row=1, column=2)"""
 
 #Frecuencia de la señal W
 tk.Label(window, text="Frecuencia", bg="black", fg="white", font="none 12 bold") .grid(row=5, column=0)
-w = tk.Entry(window) .grid(row=5, column=2)
+w = double(tk.Entry(window) .grid(row=5, column=2))
 
 #Fase de la señal
 tk.Label(window, text="Fase", bg="black", fg="white", font="none 12 bold") .grid(row=6, column=0)
-phi = tk.Entry(window) .grid(row=6, column=2)
+phi = double(tk.Entry(window) .grid(row=6, column=2))
 
 #Tiempo de latencia
 tk.Label(window, text="Tiempo de latencia", bg="black", fg="white", font="none 12 bold") .grid(row=7, column=0)
-f = tk.Entry(window) .grid(row=7, column=2)
+f = double(tk.Entry(window) .grid(row=7, column=2))
 
 #grafica eje x
 plots.xaxisplot(w,dist, a, phi, c)
