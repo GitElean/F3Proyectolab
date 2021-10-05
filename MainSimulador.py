@@ -22,7 +22,7 @@ window.geometry("800x600")
 area = 0.006 #metros
 
 #Distancia de separacion entre las placas
-dist = 0.005 #metros
+dist = 0.005 #metros Dato d, de las funcioones para x e y
 
 #Distancia desde las placas de deflexión verticales a las horizontales
 verHor = 0.003 #metros
@@ -38,11 +38,11 @@ a = tk.Entry(window) .grid(row=1, column=2)
 
 #Voltaje de de placas de deflexión verticales
 tk.Label(window, text="Deflexion vertical", bg="black", fg="white", font="none 12 bold") .grid(row=2, column=0)
-b = tk.Entry(window) .grid(row=2, column=2)
+b = tk.Entry(window) .grid(row=2, column=2)#para y
 
 #Voltaje de placas de deflexión horizontales
 tk.Label(window, text="Deflexion horizontal", bg="black", fg="white", font="none 12 bold") .grid(row=3, column=0)
-c = tk.Entry(window) .grid(row=3, column=2)
+c = tk.Entry(window) .grid(row=3, column=2) #para x
 
 #Boton de modo cambia las señales (positivas a negativas)
 

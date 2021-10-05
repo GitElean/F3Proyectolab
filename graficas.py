@@ -11,8 +11,8 @@ import matplotlib as mlp
 import numpy as np
 
 
-def xaxisplot(wx,d, v, phi,ax):
-    t = d/v
+def xaxisplot(wx,d, va, phi,ax):
+    t = d/va
     x=ax*np.cos(wx * t + phi)
     pass
 
