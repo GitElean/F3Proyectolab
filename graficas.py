@@ -8,5 +8,18 @@ gráficas
 """
 
 import matplotlib as mlp
+import numpy as np
 
+
+def xaxisplot(wx,d, v, phi,ax):
+    t = d/v
+    x=ax*np.cos(wx * t + phi)
+    pass
+
+def yaxisplot(wy, t, phi, ay):
+    y = ay * np.cos(wy * t + phi)
+    pass
+
+def sinosuidalplot():
+    pass
 
