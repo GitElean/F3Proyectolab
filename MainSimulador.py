@@ -28,7 +28,7 @@ dist = 0.005 #metros
 verHor = 0.003 #metros
 
 photo1= PhotoImage(file="TuboCatodico.png")
-tk.Label(window, image=photo1, bg="gray"). grid(row=4, column=4)
+tk.Label(window, image=photo1, bg="gray"). grid(row=0, column=4)
 
 """input"""
 #Voltaje de aceleración de los electrones
