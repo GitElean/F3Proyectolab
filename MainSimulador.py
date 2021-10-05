@@ -10,7 +10,8 @@ Created on Wed Sep 29 12:45:23 2021
 
 import tkinter as tk
 from tkinter import PhotoImage, font
-import matplotlib
+import matplotlib as plt
+import graficas as plots
 
 window = tk.Tk()
 window.title("Simulador de tubos catódicos")
@@ -39,7 +40,7 @@ a = tk.Entry(window) .grid(row=1, column=2)
 tk.Label(window, text="Deflexion vertical", bg="black", fg="white", font="none 12 bold") .grid(row=2, column=0)
 b = tk.Entry(window) .grid(row=2, column=2)
 
-#Voltaje de de placas de deflexión horizontales
+#Voltaje de placas de deflexión horizontales
 tk.Label(window, text="Deflexion horizontal", bg="black", fg="white", font="none 12 bold") .grid(row=3, column=0)
 c = tk.Entry(window) .grid(row=3, column=2)
 
@@ -61,6 +62,13 @@ e = tk.Entry(window) .grid(row=6, column=2)
 #Tiempo de latencia
 tk.Label(window, text="Tiempo de latencia", bg="black", fg="white", font="none 12 bold") .grid(row=7, column=0)
 f = tk.Entry(window) .grid(row=7, column=2)
+
+#grafica eje x
+
+#grafica eje y
+
+#grafica sinusoidal
+
 
 window.mainloop()
 #Ecuaciones 
