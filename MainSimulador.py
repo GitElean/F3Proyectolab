@@ -2,10 +2,9 @@
 """
 Created on Wed Sep 29 12:45:23 2021
 
-@author: Elean Rivas 
+@author: Elean Rivas 19062
          Mirka Monzon 18139
          Cristopher Barrios 18207
-         El Elean
 """
 
 import tkinter as tk
@@ -22,7 +21,7 @@ window.geometry("800x600")
 area = 0.006 #metros
 
 #Distancia de separacion entre las placas
-dist = 0.005 #metros Dato d, de las funcioones para x e y
+dist = 0.005 #metros Dato d, de las funcioones para x e y #✓
 
 #Distancia desde las placas de deflexión verticales a las horizontales
 verHor = 0.003 #metros
@@ -32,7 +31,7 @@ tk.Label(window, image=photo1, bg="gray"). grid(row=0, column=0)
 
 """input"""
 #Voltaje de aceleración de los electrones
-tk.Label(window, text="Amplitud", bg="black", fg="white", font="none 12 bold") .grid(row=1, column=0)
+tk.Label(window, text="Amplitud", bg="black", fg="white", font="none 12 bold") .grid(row=1, column=0)#✓
 a = tk.Entry(window) .grid(row=1, column=2)
 
 
@@ -53,20 +52,20 @@ a = tk.Entry(window) .grid(row=1, column=2)"""
 
 #Frecuencia de la señal
 tk.Label(window, text="Frecuencia", bg="black", fg="white", font="none 12 bold") .grid(row=5, column=0)
-d = tk.Entry(window) .grid(row=5, column=2)
+w = tk.Entry(window) .grid(row=5, column=2)
 
 #Fase de la señal
 tk.Label(window, text="Fase", bg="black", fg="white", font="none 12 bold") .grid(row=6, column=0)
-e = tk.Entry(window) .grid(row=6, column=2)
+phi = tk.Entry(window) .grid(row=6, column=2)
 
 #Tiempo de latencia
 tk.Label(window, text="Tiempo de latencia", bg="black", fg="white", font="none 12 bold") .grid(row=7, column=0)
 f = tk.Entry(window) .grid(row=7, column=2)
 
 #grafica eje x
-
+plots.xaxisplot(w,dist, a, phi, c)
 #grafica eje y
-
+plots.xaxisplot(w,dist, a, phi, b)
 #grafica sinusoidal
 
 
