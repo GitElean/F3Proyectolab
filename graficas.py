@@ -29,14 +29,20 @@ def makeplotx(wx,d, va, phi,ax):
     xlist = np.linespace(-10,10,num=300)
     ylist = yaxisplot(xlist, wx,d, va, phi,ax)
     plt.plot(xlist, ylist)
+    plt.xlim(-100,100)
+    plt.ylim(-100, 100)
     plt.title("Movimiento horizontal")
+    plt.shoow()
 
     
 def makeplotx(wy,d, va, phi,ay):
     xlist = np.linespace(-10,10,num=300)
     ylist = yayisplot(xlist, wy,d, va, phi,ay)
     plt.plot(xlist, ylist)
+    plt.xlim(-100, 100)
+    plt.ylim(-100, 100)
     plt.title("Movimiento vertical")
+    plt.shoow()
 
 def sinuosoidalplot(wx,d, va, phi,ax, wy, d, va, phi,ay):
     xlist = np.linespace(-10, 10, num=300)
@@ -45,4 +51,7 @@ def sinuosoidalplot(wx,d, va, phi,ax, wy, d, va, phi,ay):
     y2list = yayisplot(xlist, wy, d, va, phi, ay)
     plt.plot(xlist, ylist)
     plt.plot(x2list, y2list)
+    plt.xlim(-100, 100)
+    plt.ylim(-100, 100)
     plt.title("Pantalla")
+    plt.shoow()
