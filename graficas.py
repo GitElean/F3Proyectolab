@@ -37,7 +37,7 @@ def makeplotx(wx,d, va, phi,ax):
     
 def makeplotx(wy,d, va, phi,ay):
     xlist = np.linespace(-10,10,num=300)
-    ylist = yayisplot(xlist, wy,d, va, phi,ay)
+    ylist = yaxisplot(xlist, wy,d, va, phi,ay)
     mlp.plot(xlist, ylist)
     mlp.xlim(-100, 100)
     mlp.ylim(-100, 100)
@@ -48,7 +48,7 @@ def sinuosoidalplot(wx,d, va, phi,ax, wy, ay):
     xlist = np.linespace(-10, 10, num=300)
     ylist = yaxisplot(xlist, wx, d, va, phi, ax)
     x2list = np.linespace(-10, 10, num=300)
-    y2list = yayisplot(xlist, wy, d, va, phi, ay)
+    y2list = yaxisplot(xlist, wy, d, va, phi, ay)
     mlp.plot(xlist, ylist)
     mlp.plot(x2list, y2list)
     mlp.xlim(-100, 100)
