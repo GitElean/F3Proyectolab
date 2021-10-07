@@ -9,8 +9,9 @@ Created on Wed Sep 29 12:45:23 2021
 
 import tkinter as tk
 from tkinter import PhotoImage, font
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from numpy import double
+import numpy as np
 import graficas as plots
 
 window = tk.Tk()
@@ -63,11 +64,30 @@ phi = double(tk.Entry(window) .grid(row=6, column=2))
 tk.Label(window, text="Tiempo de latencia", bg="black", fg="white", font="none 12 bold") .grid(row=7, column=0)
 f = double(tk.Entry(window) .grid(row=7, column=2))
 
-#grafica eje x
-plots.xaxisplot(w,dist, a, phi, c)
-#grafica eje y
-plots.xaxisplot(w,dist, a, phi, b)
-#grafica sinusoidal
+
+
+
+
+xlist = np.linspace(-10,10,num=1000)
+ylist = plots.xaxisplot(xlist,w,dist,a,phi,b)
+y1list = plots.yaxisplot(xlist,w,dist,a,phi,c)
+
+def yg(x,y):
+    plt.figure(num=0,dpi=120)
+    plt.plot(x,y,label="vertical(y)")
+    
+def xg(x,y):
+    plt.figure(num=0,dpi=120)
+    plt.plot(x,y,label="vertical(x)")
+    
+def sg(x,y):
+    plt.figure(num=0,dpi=120)
+    plt.plot(x,y,label="Pantalla")
+    
+    
+yg(xlist,y1list)
+xg(xlist,ylist)
+sg(ylist,y1list)
 
 
 window.mainloop()
